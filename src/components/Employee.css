@@ -1,0 +1,239 @@
+/* Container styling */
+.employee-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    overflow-x: auto; /* To enable horizontal scrolling for small screens */
+  }
+  
+  /* Title styling */
+  .employee-title {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Table styling */
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: auto; /* Ensures the table spreads across the screen */
+  }
+  
+  /* Table Header styling */
+  .employee-table th {
+    padding: 15px 20px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-top: 2px solid #388e3c;
+    border-bottom: 2px solid #388e3c;
+  }
+  
+  /* Table Row styling */
+  .employee-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Hover Effect on table rows */
+  .employee-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Action button styling */
+  .action-btn {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Edit Button styling */
+  .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Delete Button styling */
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+  }
+  
+  /* Empty State for No Data */
+  .employee-table td[colspan="8"] {
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    /* Make the table scrollable horizontally */
+    .employee-table {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    /* Adjust padding on smaller screens */
+    .employee-table th, .employee-table td {
+      padding: 10px;
+    }
+  
+    /* Adjust table header font size */
+    .employee-table th {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Further adjust for smaller mobile devices */
+  @media screen and (max-width: 480px) {
+    /* Further adjust padding and font size for mobile */
+    .employee-title {
+      font-size: 2rem;
+    }
+  
+    .employee-table th, .employee-table td {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .action-btn {
+      font-size: 0.8rem;
+    }
+  }
+  
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .employee-form {
+    margin-top: 20px;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-field label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .close-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .close-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+  }
+  
+  /* Add Employee Button Styling */
+  .add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
